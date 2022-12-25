@@ -1,0 +1,14 @@
+/* Clients list shortcode style - start */
+.qodef-clients-list {
+	.qodef-e {
+		@include qodefRelativeLayout();
+	}
+
+	&.qodef-layout--slider {
+
+		.swiper-wrapper {
+			align-items: center;
+		}
+	}
+}
+/* Clients list shortcode style - end */

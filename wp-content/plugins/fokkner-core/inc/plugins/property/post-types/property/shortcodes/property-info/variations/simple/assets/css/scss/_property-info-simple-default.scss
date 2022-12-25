@@ -1,0 +1,23 @@
+.qodef-property-info-holder{
+    &.qodef-pi--simple{
+        text-align: center;
+
+        .qodef-e-media-image{
+            margin: 0 0 10px;
+        }
+
+        .qodef-e-title{
+            margin: 0 0 15px;
+        }
+
+        .qodef-e-feature-title{
+            margin: 10px 0 0;
+        }
+
+        .qodef-e-pi-item-inner{
+            padding: 20px 10px;
+            border: 1px solid $border-color;
+        }
+
+    }
+}

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Image Gallery shortcode styles
+   ========================================================================== */
+
+.qodef-image-gallery {
+
+  .qodef-image-wrapper {
+
+    .qodef-image-inner-wrapper {
+      display: inline-flex;
+      flex-direction: column;
+      text-align: center;
+
+      .qodef-image-gallery-caption {
+        margin-top: 19px;
+      }
+    }
+  }
+
+  &.qodef-circle-images--yes {
+
+    .qodef-image-wrapper {
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+}

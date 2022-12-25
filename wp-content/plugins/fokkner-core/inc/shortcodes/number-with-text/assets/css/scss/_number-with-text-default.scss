@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Number With Text shortcode styles
+   ========================================================================== */
+
+.qodef-number-with-text {
+
+  .qodef-number {
+    @include qodefH3Style();
+    font-weight: 500;
+  }
+
+  .qodef-m-title {
+    margin: 30px 0 0;
+  }
+
+  .qodef-m-text {
+    margin: 15px 0 10px;
+  }
+}

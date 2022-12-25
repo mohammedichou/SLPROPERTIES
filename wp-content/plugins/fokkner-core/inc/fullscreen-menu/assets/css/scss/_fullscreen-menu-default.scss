@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Full Screen Menu styles
+   ========================================================================== */
+
+#qodef-fullscreen-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $box-background-color;
+  overflow-x: hidden !important;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99; /* smaller than header, bigger than content */
+
+  .qodef-content-grid {
+    height: 100%;
+
+    .qodef-fullscreen-menu {
+      width: 100%;
+    }
+  }
+
+  .qodef-fullscreen-menu-animate--in & {
+    animation: qode-fade-in .25s linear both;
+  }
+
+  .qodef-fullscreen-menu-animate--out & {
+    animation: qode-fade-out .25s linear both;
+  }
+}
+
+#qodef-fullscreen-area-inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+$menu-top-bottom-spacing: 0;
+$menu-level-two-left-spacing: 0;
+
+.qodef-fullscreen-menu {
+  position: relative;
+  top: 0;
+  margin: 0 auto;
+  text-align: left;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin: 0;
+      padding: 0;
+
+      a {
+
+        .qodef-menu-item-arrow {
+
+          @include qodefMenuItemArrowStyle();
+          width: 40px;
+          top: calc(50% - 16px);
+          right: unset;
+          stroke: currentColor;
+
+        }
+      }
+
+      &.qodef--hide-link {
+
+        > a {
+          cursor: default;
+        }
+      }
+    }
+
+    &.sub-menu {
+      display: none;
+    }
+  }
+
+  .qodef-menu-item-icon {
+    margin-right: 5px;
+  }
+
+  .qodef-mega-menu-widget-holder {
+    display: none;
+  }
+
+  > ul {
+
+    > li {
+
+      > a {
+        font-size: 38px;
+        font-weight: 500;
+        line-height: 1.5em;
+        color: $heading-color;
+
+        &:hover {
+          @include qodefMenuLevelOneHoverStyle();
+
+          span {
+            position: relative;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 1px;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+
+      &.current-menu-ancestor,
+      &.current-menu-item {
+
+        > a {
+          @include qodefMenuLevelOneHoverStyle();
+
+          span {
+            position: relative;
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 1px;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .qodef-drop-down-second-inner {
+
+    > ul {
+      padding: $menu-top-bottom-spacing;
+    }
+
+    ul {
+      padding-left: $menu-level-two-left-spacing;
+
+      li {
+
+        > a {
+          @include qodefMenuLevelTwoInitialStyle();
+          @include qodefMenuLevelTwoInitialTypographyStyle(#fff);
+          margin: 10px 0;
+
+          &:hover {
+          }
+
+          .qodef-menu-item-arrow {
+            display: none;
+          }
+        }
+
+        &.current-menu-ancestor,
+        &.current-menu-item {
+
+          > a {
+          }
+        }
+      }
+    }
+  }
+}

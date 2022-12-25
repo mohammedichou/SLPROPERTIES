@@ -1,0 +1,122 @@
+#qodef-page-spinner {
+
+    &.qodef-layout--fokkner {
+
+        .qodef-m-fokkner {
+
+            .qodef-m-svg {
+
+                rect {
+
+                    &:nth-child(1) {
+                        transform: translate(-100%, 0);
+                    }
+
+                    &:nth-child(2) {
+                        transform: translate(0, -100%);
+                    }
+
+                    &:nth-child(3) {
+                        transform: translate(0, 100%);
+                    }
+
+                    &:nth-child(4) {
+                        transform: translate(100%, 0);
+                    }
+                }
+            }
+        }
+
+        &.qodef--init {
+
+            .qodef-m-fokkner {
+
+                .qodef-m-svg {
+
+                    rect {
+                        animation: qodef-preloader-init-animation .64s forwards cubic-bezier(0.54, 0.32, 0.05, 0.96);
+                    }
+                }
+            }
+
+            &.qodef--animate {
+
+                .qodef-m-fokkner {
+
+                    .qodef-m-svg {
+
+                        rect {
+
+                            &:nth-child(1) {
+                                animation: qodef-preloader-first-rect-animation .88s infinite cubic-bezier(0.54, 0.32, 0.05, 0.96);
+                            }
+
+                            &:nth-child(2) {
+                                animation: qodef-preloader-second-rect-animation .88s infinite cubic-bezier(0.54, 0.32, 0.05, 0.96);
+                            }
+
+                            &:nth-child(3) {
+                                animation: qodef-preloader-third-rect-animation .88s infinite cubic-bezier(0.54, 0.32, 0.05, 0.96);
+                            }
+
+                            &:nth-child(4) {
+                                animation: qodef-preloader-fourth-rect-animation .88s infinite cubic-bezier(0.54, 0.32, 0.05, 0.96);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include keyframes(qodef-preloader-init-animation) {
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@include keyframes(qodef-preloader-first-rect-animation) {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    60%,
+    100% {
+        transform: translate(calc(100% - 8px), 0);
+    }
+}
+
+@include keyframes(qodef-preloader-second-rect-animation) {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    60%,
+    100% {
+        transform: translate(0, calc(100% - 8px));
+    }
+}
+
+@include keyframes(qodef-preloader-third-rect-animation) {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    60%,
+    100% {
+        transform: translate(0, calc(-100% + 8px));
+    }
+}
+
+@include keyframes(qodef-preloader-fourth-rect-animation) {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    60%,
+    100% {
+        transform: translate(calc(-100% + 8px), 0);
+    }
+}

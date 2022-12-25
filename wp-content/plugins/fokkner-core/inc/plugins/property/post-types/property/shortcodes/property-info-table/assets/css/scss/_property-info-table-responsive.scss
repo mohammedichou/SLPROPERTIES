@@ -1,0 +1,13 @@
+.qodef-property-info-table{
+
+    @include qodefScreenSize680{
+        .qodef-e-inner{
+            display: none;
+        }
+
+        .qodef-e-inner-responsive{
+            display: block;
+        }
+    }
+
+}

@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Single Post Navigation styles
+   ========================================================================== */
+
+#qodef-single-post-navigation {
+	@include qodefRelativeLayout();
+	margin: 65px 0 3px;
+
+	body:not([class*="fokkner-core"]) & {
+		margin: 28px 0 3px;
+	}
+	
+	.qodef-m-inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.qodef-m-nav {
+		position: relative;
+		display: flex;
+		align-items: center;
+		
+		> * {
+			display: block;
+			line-height: inherit;
+		}
+		
+		.qodef-m-pagination-icon {
+			position: relative;
+			top: -2px;
+			display: block;
+			width: 30px;
+			height: auto;
+			fill: currentColor;
+			stroke: none;
+		}
+		
+		&.qodef--prev {
+			left: 0;
+			
+			.qodef-m-pagination-icon {
+				margin-right: 4px;
+			}
+
+			&:hover {
+
+				.qodef-m-nav-label {
+
+					&:after {
+						animation: qodef-textual-button-reverse-animation .7s forwards cubic-bezier(0.85, 0.26, 0.17, 1);
+					}
+				}
+			}
+		}
+		
+		&.qodef--next {
+			flex-direction: row-reverse;
+			right: 0;
+			margin-left: auto;
+			text-align: right;
+			
+			.qodef-m-pagination-icon {
+				margin-left: 4px;
+			}
+
+			&:hover {
+
+				.qodef-m-nav-label {
+
+					&:after {
+						animation: qodef-textual-button-animation .7s forwards cubic-bezier(0.85, 0.26, 0.17, 1);
+					}
+				}
+			}
+		}
+	}
+	
+	.qodef-m-nav-label {
+		@include qodefH6Style();
+		font-weight: 500;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background-color: #fff;
+		}
+	}
+}

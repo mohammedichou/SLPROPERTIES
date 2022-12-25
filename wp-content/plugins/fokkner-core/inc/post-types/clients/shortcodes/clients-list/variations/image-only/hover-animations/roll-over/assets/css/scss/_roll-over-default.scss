@@ -1,0 +1,52 @@
+/* Clients list shortcode style - start */
+.qodef-clients-list.qodef-item-layout--image-only.qodef-hover-animation--roll-over {
+
+	.qodef-e {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.qodef-e-image {
+			line-height: 0;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			overflow: hidden;
+
+			a {
+				display: inline-block;
+			}
+		}
+
+		.qodef-e-logo {
+			display: inline-block;
+			width: auto;
+			transform: translateY(0);
+			will-change: transform;
+			transition: transform .33s ease;
+		}
+
+		.qodef-e-hover-logo {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			width: auto;
+			transform: translateY(-100%);
+			will-change: transform;
+			transition: transform .33s ease;
+		}
+
+		&:hover {
+
+			.qodef-e-logo {
+				transform: translateY(100%);
+			}
+
+			.qodef-e-hover-logo {
+				transform: translateY(0);
+			}
+		}
+	}
+}
+/* Clients list shortcode style - end */

@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Property List shortcode styles
+   ========================================================================== */
+
+.qodef-property-list {
+
+    .qodef-e-inner {
+        position: relative;
+    }
+
+    .qodef-e-image {
+
+        img {
+            display: block;
+        }
+    }
+
+    .qodef-e-title {
+        margin: 0;
+    }
+
+    .qodef-m-pagination {
+        margin-top: 35px;
+    }
+
+    .qodef-e {
+
+        &.qodef-showp-roperty-label {
+
+            .qodef-e-inner {
+                position: relative;
+            }
+
+            .qodef-e-image {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .qodef-property-label-holder {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+
+            .qodef-property-label-title {
+                margin: 0;
+                padding-right: 15px;
+            }
+        }
+    }
+
+    &.qodef-items--fixed {
+
+        .qodef-e-image {
+            //because of the custom padding around item
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .qodef-e-media-image {
+            height: 100%;
+
+            a {
+                @include qodefRelativeLayout();
+                height: 100%;
+            }
+        }
+    }
+}

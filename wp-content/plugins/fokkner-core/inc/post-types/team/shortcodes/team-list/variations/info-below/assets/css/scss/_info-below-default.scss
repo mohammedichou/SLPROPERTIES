@@ -1,0 +1,22 @@
+.qodef-team-list {
+	
+	&.qodef-item-layout--info-below {
+		
+		.qodef-e-content {
+			margin: 25px 0 0;
+		}
+
+		.qodef-team-member-social-icons {
+			margin: 14px 0 0;
+		}
+
+		.qodef-team-member-social-icon {
+			margin-right: 40px;
+			font-size: 13px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

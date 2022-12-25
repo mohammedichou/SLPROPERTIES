@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Property List shortcode variation styles
+   ========================================================================== */
+
+.qodef-property-list {
+
+    &.qodef-item-layout--info-hover {
+
+        .qodef-e-inner{
+            .qodef-e-content{
+                @include qodefAbsoluteLayout();
+                opacity: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                background-color: transparentize(#fff, .25);
+                transition: $opacity-transition;
+            }
+
+            &:hover{
+                .qodef-e-content {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

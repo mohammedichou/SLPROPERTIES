@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Property Info shortcode responsive styles
+   ========================================================================== */
+
+.qodef-property-info-holder {
+
+	@include qodefScreenSize1024 {
+
+		&.qodef-title-break--disabled {
+
+			.qodef-e-title {
+
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@include qodefScreenSize680 {
+
+		.qodef-e-property-info-item {
+
+			.qodef-e-pi-content-inner {
+
+				> .qodef-grid {
+
+					>.qodef-grid-inner {
+
+						> .qodef-grid-item {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

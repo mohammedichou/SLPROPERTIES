@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Header layout responsive styles
+   ========================================================================== */
+//grid 900px on mac for vertical header
+@media only screen and (min-width: 1025px)  and (max-width: 1280px)  {
+
+	.qodef-header--vertical {
+
+		section.qodef-elementor-content-grid > .elementor-container, section.qodef-elementor-content-grid > .elementor-container {
+			width: 900px;
+		}
+	}
+
+}
+
+@include qodefScreenSize1024 {
+	
+	.qodef-header--vertical {
+  
+		#qodef-page-header-inner {
+			display: none;
+		}
+		
+		#qodef-page-outer,
+		footer {
+			padding-left: 0;
+		}
+	}
+}

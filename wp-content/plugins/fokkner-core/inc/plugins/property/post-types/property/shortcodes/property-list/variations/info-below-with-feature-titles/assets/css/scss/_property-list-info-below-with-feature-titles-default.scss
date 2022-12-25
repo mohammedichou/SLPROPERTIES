@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Property List shortcode variation styles
+   ========================================================================== */
+
+.qodef-property-list {
+
+    &.qodef-item-layout--info-below-with-feature-titles {
+        text-align: center;
+
+        .qodef-e-image{
+            margin: 0 0 15px;
+        }
+
+        .qodef-e-pl-feature-titles-holder{
+            margin: 15px 0 0;
+        }
+
+    }
+}

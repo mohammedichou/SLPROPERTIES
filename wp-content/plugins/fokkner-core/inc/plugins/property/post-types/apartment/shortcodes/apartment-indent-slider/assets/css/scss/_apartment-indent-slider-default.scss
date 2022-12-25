@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Property Indent Slider shortcode styles
+   ========================================================================== */
+
+.qodef-apartment-indent-slider {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: fit-content;
+    padding-bottom: 49px;
+
+    &.qodef-behavior--fixed-indent-slider {
+        padding-top: 6px;
+
+        .qodef-left-info {
+            width: 44.3%;
+
+            body.qodef-header--vertical & {
+                width: 33.9%;
+
+                @include qodefScreenSize1440 {
+                    width: 39.9%;
+                }
+
+                @include qodefScreenSize1280 {
+                    width: 43.3%;
+                }
+            }
+
+            .qodef-left-info-content {
+                padding: 0 100px 0 310px;
+
+                body.qodef-header--vertical & {
+                    padding: 0 120px 0 0;
+
+                    @include qodefScreenSize1440 {
+                        padding: 0 12% 0 0;
+                    }
+
+                    @media screen and (min-width: 1368px) and (max-width: 1369px) {
+                        padding: 0 12% 0 0;
+                    }
+                }
+
+                .qodef-e-title {
+                    margin: -6px 0 42px 0;
+                    line-height: 1;
+                }
+
+                .qodef-e-features-list-holder {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+
+                .qodef-e-features-list {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 29px;
+                }
+            }
+        }
+
+        .qodef-apartment-indent-slider.qodef-item-layout--info-hover {
+            width: 55.7%;
+
+            @include qodefScreenSize1024 {
+                width: 47%;
+            }
+
+            body.qodef-header--vertical & {
+                width: 66.1%;
+
+                @include qodefScreenSize1440 {
+                    width: 60.1%;
+                }
+
+                @include qodefScreenSize1280 {
+                    width: 56.7%;
+                }
+            }
+        }
+    }
+
+    .qodef-e-title {
+        margin: 0;
+    }
+
+    .qodef-e-excerpt {
+        margin: 11px 0 9px 0;
+        max-width: 300px;
+    }
+
+    .qodef-e-inner {
+        position: relative;
+    }
+
+    .qodef-e-image {
+
+        img {
+            display: block;
+        }
+    }
+
+    .qodef-counter {
+        line-height: 1;
+        letter-spacing: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 31px;
+
+        * {
+            display: inline-block;
+            letter-spacing: 0;
+        }
+    }
+
+    .qodef-m-pagination {
+        margin-top: 35px;
+    }
+
+    &.qodef-items--fixed {
+
+        .qodef-e-image {
+            //because of the custom padding around item
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .qodef-e-media-image {
+            height: 100%;
+
+            a {
+                @include qodefRelativeLayout();
+                height: 100%;
+            }
+        }
+    }
+
+    &.qodef-gutter--large.qodef--no-bottom-space {
+        margin-bottom: 0 !important;
+        padding-bottom: 51px;
+    }
+
+    .qodef-e-navigation-wrapper {
+        position: absolute;
+        bottom: 2px;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 0;
+        width: auto;
+        left: 62.5%;
+
+        @include qodefScreenSize1024 {
+            left: initial;
+            right: 0;
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: initial;
+        bottom: 0;
+    }
+
+    .swiper-button-prev {
+        left: 0 !important;
+    }
+
+    .swiper-button-next {
+        left: 65px !important;
+        right: initial !important;
+    }
+
+    .swiper-pagination-bullets {
+        bottom: 0 !important;
+        width: auto !important;
+        left: initial !important;
+        right: 0;
+    }
+}

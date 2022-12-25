@@ -1,0 +1,110 @@
+/* ==========================================================================
+	   Contact Form 7 style - begin
+   ========================================================================== */
+.qodef-contact-form-7 {
+
+  .wpcf7-form-control-wrap {
+      display: block;
+
+      .wpcf7-not-valid-tip {
+        position: absolute;
+        bottom: -2px;
+        margin-top: 0;
+      }
+  }
+
+  button {
+
+      &.wpcf7-submit {
+        @include qodefButtonOutlinedColor();
+        margin: 23px 0 0;
+        padding: 16px 32px;
+      }
+  }
+
+  input {
+    font-weight: 300;
+  }
+
+  label {
+    font-size: 13px;
+  }
+
+  .qodef-textarea {
+    display: block;
+    margin-top: 8px;
+    max-height: 158px;
+  }
+
+  .qodef-custom-cf7 {
+
+      input {
+        font-size: 15px;
+        padding: 10px 0;
+      }
+
+      button {
+
+          &.wpcf7-submit {
+            margin: 28px 0 0;
+            padding: 16px 33px;
+          }
+      }
+  }
+}
+
+.qodef-nf-footer-style {
+  position: relative;
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+
+  .wpcf7-form-control::-ms-clear {
+    display: none !important;
+  }
+
+  .ajax-loader {
+    position: absolute !important;
+    left: 100%;
+    bottom: -5px;
+
+    div#qodef-side-area & {
+      bottom: 27px;
+    }
+  }
+
+  .wpcf7-form-control.wpcf7-submit {
+    position: absolute;
+    display: inline-block;
+    padding: 0;
+    bottom: 12px;
+    right: 0;
+    line-height: 1;
+    background-color: transparent!important;
+    border: 0!important;
+    font-size: 0;
+    font-style: normal;
+
+    &:before {
+      content: "";
+      font-family: Ionicons;
+      font-size: 15px;
+      color: #fff;
+      bottom: 25px;
+      position: relative;
+    }
+  }
+}
+
+//contact page form
+.qodef-contact-page-form {
+
+  .qodef-message {
+    margin-top: -4px;
+
+    textarea {
+      margin: 6px 0 16px;
+    }
+  }
+
+}

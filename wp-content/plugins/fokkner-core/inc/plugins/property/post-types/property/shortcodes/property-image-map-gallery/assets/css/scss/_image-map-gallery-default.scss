@@ -1,0 +1,290 @@
+.qodef-image-map-gallery {
+    display: flex;
+    align-items: center;
+
+    @include qodefScreenSize768 {
+        flex-direction: column;
+    }
+
+    .qodef-property-image-map-holder {
+        width: 100%;
+    }
+
+    .qodef-property-image-map-inner {
+        display: none;
+
+        @include qodefScreenSize768 {
+            flex-direction: column;
+        }
+
+        &.qodef-section-active {
+            display: flex;
+        }
+    }
+
+    .qodef-img-slider,
+    .qodef-pagination-slider{
+        overflow: hidden;
+    }
+
+    .qodef-img-holder,
+    .qodef-map-holder{
+        display: inline-block;
+    }
+
+    .qodef-img-holder {
+        position: relative;
+        width: 57.8%;
+
+        @include qodefScreenSize768 {
+            width: 100%;
+            margin-top: 44px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .qodef-media-section {
+            width: 86%;
+            float: left;
+
+            @include qodefScreenSize1024 {
+                width: 80%;
+            }
+
+            @include qodefScreenSize768 {
+                position: relative;
+                width: 100%;
+                margin-top: 21px;
+            }
+
+            .qodef-img-video-inner,
+            .qodef-img-360-video-inner {
+                width: 86%;
+
+                @include qodefScreenSize1024 {
+                    width: 80%;
+                }
+
+                @include qodefScreenSize768 {
+                    width: 100%;
+                    transform: none;
+                    bottom: initial;
+                    top: 0;
+                }
+            }
+        }
+
+        .qodef-img-section{
+            z-index: -1;
+            opacity: 0;
+            transition: opacity .2s ease-in-out;
+
+            &.active{
+                z-index: 10;
+                opacity: 1;
+            }
+        }
+
+        .qodef-img-video-inner,
+        .qodef-img-360-video-inner{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .qodef-img-slider{
+            margin-bottom: 15px;
+
+            .swiper-slide {
+                opacity: 1 !important;
+                z-index: -1;
+                overflow: hidden;
+                clip-path: inset(0 100% 0 0);
+                -webkit-clip-path: inset(0 100% 0 0);
+                transition: clip-path .64s cubic-bezier(0.54, 0.32, 0.05, 0.96) .64s;
+
+                &.swiper-slide-active,
+                &.swiper-slide-duplicate-active {
+                    z-index: 1;
+                    clip-path: inset(0 0 0 0);
+                    -webkit-clip-path: inset(0 0 0 0);
+                    transition: clip-path .64s cubic-bezier(0.54, 0.32, 0.05, 0.96);
+                }
+            }
+        }
+
+        .qodef-pagination-slider{
+            list-style: none;
+        }
+    }
+
+    .qodef-map-holder {
+        display: flex;
+        align-items: flex-end;
+        width: 42.2%;
+        padding: 0 88px 89px 12px;
+
+        @include qodefScreenSize768 {
+            width: 100%;
+            padding: 100px 0 20px 0;
+            justify-content: center;
+        }
+
+
+        > div{
+            position: relative;
+        }
+
+        .qodef-image-map-holder-overlay {
+            content: '';
+            @include qodefAbsoluteLayout();
+            z-index: -1;
+        }
+
+        .imp-wrap{
+            max-width: 100%;
+            margin: 0 auto;
+            width: 100%!important;
+            height: auto!important;
+        }
+    }
+
+    .qodef-map-navigation {
+        position: relative;
+        width: 14%;
+        float: left;
+        list-style: none;
+        text-align: center;
+
+        @include qodefScreenSize1024 {
+            width: 20%;
+        }
+
+        @include qodefScreenSize768 {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+
+            .qodef-map-nav-item {
+                float: left;
+            }
+        }
+
+        .qodef-map-nav-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 7px 38px 0;
+            padding: 0 1px 3px 9px;
+            cursor: pointer;
+            line-height: 1;
+            transition: background-color .2s ease-in-out;
+
+            @include qodefScreenSize1440 {
+                margin: 0 0 38px 0;
+                padding: 0 1px 3px 1px;
+            }
+
+            @include qodefScreenSize1024 {
+                margin: 0 7px 18px;
+                padding: 0 1px 3px 9px;
+            }
+
+            @include qodefScreenSize768 {
+                margin: 0 16px 18px;
+                padding-right: 19px;
+            }
+
+            @include qodefScreenSize680 {
+                margin: 0 12px 18px;
+                padding-right: 16px;
+            }
+
+            .qodef-map-nav-item-text{
+                font-weight: 500;
+            }
+
+            .qodef-icon-property-icons {
+                font-size: 40px;
+                margin-bottom: 1px;
+                position: relative;
+                top: -6px;
+            }
+        }
+
+        .qodef-following-nav-border {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1;
+        }
+    }
+
+    .qodef-tabs-holder {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @include qodefScreenSize768 {
+            position: absolute;
+            bottom: initial;
+            top: 0;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .qodef-tabs-navigation {
+            display: flex;
+            list-style: none;
+            margin: 0;
+
+            li {
+                position: relative;
+
+                a {
+                    display: block;
+                    font-weight: 500;
+                    padding: 16px 2.45vw;
+
+                    @include qodefScreenSize768 {
+                        padding: 16px 47px;
+                    }
+
+                    @include qodefScreenSize680 {
+                        padding: 16px 27px;
+                    }
+
+                    @media screen and (max-width: 340px) {
+                        padding: 16px 18px;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #434343;
+                    }
+                }
+            }
+
+            .qodef-following-tab-border {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                z-index: 1;
+            }
+        }
+    }
+}

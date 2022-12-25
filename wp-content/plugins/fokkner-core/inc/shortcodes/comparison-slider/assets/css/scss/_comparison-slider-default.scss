@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Comparison Slider shortcode styles
+   ========================================================================== */
+
+.qodef-comparison-slider {
+
+  .qodef-comparison-slider-holder {
+    visibility: hidden;
+    color: #000;
+
+    img {
+      position: absolute;
+    }
+
+    &.active {
+      cursor: grab;
+    }
+  }
+
+  .qodef-e-dates {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+}

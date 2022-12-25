@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Property List shortcode variation styles
+   ========================================================================== */
+
+.qodef-property-list {
+
+  &.qodef-item-layout--info-over-image {
+
+    .qodef-e-media-image {
+
+      img {
+        transform: scale(1.001);
+        will-change: transform;
+        transition: transform .58s cubic-bezier(0.54, 0.32, 0.05, 0.96);
+      }
+    }
+
+    .qodef-e-inner{
+      overflow: hidden;
+
+      .qodef-e-content{
+        position: absolute;
+        bottom: 0;
+        margin: 0 0 35px 35px;
+      }
+
+      &:hover{
+        .qodef-e-media-image {
+
+          img {
+            transform: scale(1.06);
+          }
+        }
+      }
+    }
+  }
+}

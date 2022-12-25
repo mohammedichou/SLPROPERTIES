@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Property Indent Slider shortcode variation styles
+   ========================================================================== */
+
+.qodef-apartment-indent-slider {
+
+    &.qodef-item-layout--info-hover {
+
+        .qodef-e-inner {
+
+            .qodef-e-content {
+                @include qodefAbsoluteLayout();
+                opacity: 0;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                text-align: left;
+                padding: 36px 36px;
+                background: linear-gradient(to top,rgba(0,0,0,.55) 0,rgba(0,0,0,0) 100%);
+                transition: $opacity-transition;
+
+                @include qodefScreenSize680 {
+                    padding: 20px 20px;
+                }
+
+                .qodef-e-content-inner {
+
+                    > * {
+                        opacity: 0;
+                        transform: translateY(24px);
+                        will-change: transform;
+                        transition: opacity .26s ease-out, transform .44s ease;
+                    }
+                }
+            }
+
+            &:hover {
+
+                .qodef-e-content {
+                    opacity: 1;
+                }
+
+                .qodef-e-content-inner {
+
+                    > * {
+                        opacity: 1;
+                        transform: translateY(0);
+
+                        @for $i from 1 through 3 {
+
+                            &:nth-child(#{$i}) {
+                                transition-delay: (#{$i * 80ms});
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

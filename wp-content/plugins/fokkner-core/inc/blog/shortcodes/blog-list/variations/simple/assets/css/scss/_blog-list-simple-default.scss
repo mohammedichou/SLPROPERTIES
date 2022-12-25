@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Blog List Simple styles
+   ========================================================================== */
+
+.qodef-blog {
+	
+	&.qodef-item-layout--simple {
+		
+		article {
+			
+			.qodef-e-inner {
+				display: flex;
+				align-items: center;
+			}
+			
+			.qodef-e-media-image {
+				flex-shrink: 0;
+				margin: 0 20px 0 0;
+				width: 120px;
+			}
+			
+			.qodef-e-info {
+				
+				&.qodef-info--bottom {
+					margin-top: 5px;
+				}
+			}
+
+			&.format-audio {
+
+				.qodef-e-media-image {
+                  width: 120px;
+                }
+			}
+
+			&.format-quote {
+
+				.qodef-e-content {
+					margin: 0;
+				}
+			}
+
+			&.format-link {
+
+				.qodef-e-content {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.widget_fokkner_core_blog_list {
+
+	.qodef-blog {
+
+		&.qodef-item-layout--simple {
+
+			article {
+
+				.qodef-e-media-image {
+					width: 80px;
+				}
+
+				&.format-audio {
+
+					.qodef-e-media-image {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}

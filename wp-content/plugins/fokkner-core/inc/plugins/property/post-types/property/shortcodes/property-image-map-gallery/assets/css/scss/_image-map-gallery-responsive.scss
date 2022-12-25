@@ -1,0 +1,32 @@
+.qodef-image-map-gallery {
+
+    body.qodef-header--vertical & {
+
+        @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+
+            .qodef-img-holder {
+
+                .qodef-media-section {
+                    width: 80%;
+
+                    .qodef-img-360-video-inner,
+                    .qodef-img-video-inner {
+                        width: 80%;
+                    }
+                }
+            }
+
+            .qodef-map-navigation {
+                width: 20%;
+
+                .qodef-map-nav-item {
+                    margin: 0 12px 38px 0;
+                    padding: 0 1px 3px 9px;
+                }
+            }
+        }
+
+        @include qodefScreenSize1440 {}
+    }
+}
+

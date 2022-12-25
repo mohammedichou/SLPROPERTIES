@@ -1,0 +1,62 @@
+.qodef-tabs-showcase.qodef-layout--simple {
+
+    &.qodef-tabs-with-images {
+
+        @include qodefScreenSize1600 {
+
+            .qodef-tabs-images {
+
+                .qodef-tab-image {
+                    height: 100%;
+
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        @include qodefScreenSize1024 {
+
+            .qodef-tabs-images {
+                width: 44%;
+            }
+
+            .qodef-tabs-showcase-holder {
+                width: 56%;
+                padding-left: 50px;
+            }
+        }
+
+        @include qodefScreenSize1024 {
+
+            .qodef-tabs-images {
+                width: 100%;
+            }
+
+            .qodef-tabs-showcase-holder {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+
+        @include qodefScreenSize680 {
+
+            .qodef-tabs-images {
+                min-height: 50vh;
+            }
+        }
+    }
+
+    @include qodefScreenSize1024 {
+
+        .qodef-tabs-showcase-navigation {
+            li {
+                a {
+                    min-width: auto;
+                }
+            }
+        }
+    }
+}

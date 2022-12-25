@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Contact Form 7 widget styles
+   ========================================================================== */
+
+.qodef-contact-form-7 {
+    @include qodefRelativeLayout();
+
+    .wpcf7-response-output {
+        margin: 25px 0 0 0 !important;
+    }
+
+    .ajax-loader {
+        background-image: none !important;
+        background-color: transparent;
+        height: 28px !important;
+        margin: 0 0 0 12px !important;
+        position: relative;
+        bottom: -5px;
+        right: -10px;
+        width: 28px !important;
+        opacity: 1;
+
+        .qodef-form-spinner {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 28px;
+            height: auto;
+            fill: $main-color;
+            stroke: none;
+            animation: qode-rotate 2s infinite linear;
+        }
+
+        &:before {
+            content: none;
+        }
+    }
+}

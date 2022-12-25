@@ -1,0 +1,60 @@
+.qodef-property-info-holder {
+    &.qodef-pi--standard {
+        text-align: center;
+
+        .qodef-e-pi-item-inner {
+            display: table;
+            float: left;
+            margin-bottom: 1px;
+
+            > div {
+                display: table-cell;
+                vertical-align: middle;
+
+                &:first-child {
+                    height: 50px;
+                    width: 50px;
+                }
+
+                &:last-child {
+                    padding-left: 13px;
+                }
+            }
+        }
+
+        .qodef-e-property-info-item {
+            text-align: left;
+        }
+
+        .qodef-e-media-image{
+            margin: 0 0 10px;
+        }
+
+        .qodef-e-title{
+            margin: 0 0 28px;
+        }
+
+        .qodef-e-feature-title{
+            margin: 6px 0 0;
+            letter-spacing: 0;
+        }
+
+        .qodef-e-feature-description {
+            letter-spacing: 0;
+        }
+
+        .qodef-e-excerpt {
+            letter-spacing: 0;
+            margin-bottom: 36px;
+        }
+
+        .qodef-e-read-more {
+            margin-top: 14px;
+
+            .qodef-button {
+                line-height: 1.35em;
+                padding: 16px 43px;
+            }
+        }
+    }
+}

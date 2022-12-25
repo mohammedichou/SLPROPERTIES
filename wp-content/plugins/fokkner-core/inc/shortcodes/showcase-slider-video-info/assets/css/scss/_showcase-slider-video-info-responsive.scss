@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Showcase Slider Video Info shortcode responsive style - begin
+   ========================================================================== */
+
+.qodef-showcase-slider-video-info {
+
+    @include qodefScreenSize1440 {
+
+        .qodef-additional-swiper {
+            height: 200px;
+
+            .qodef-m-info-holder {
+                padding: 0 0 0 60px;
+            }
+
+            .qodef-m-info-text {
+                padding-right: 60px;
+                padding-left: 12px;
+            }
+        }
+    }
+
+    @include qodefScreenSize1366 {
+
+        .qodef-additional-swiper {
+            height: 191px;
+            width: 71vw;
+        }
+    }
+
+    @include qodefScreenSize1280 {
+
+        .qodef-additional-swiper {
+            height: 180px;
+            width: 69vw;
+
+            .qodef-m-info-holder {
+                padding: 0 0 0 35px;
+            }
+
+            .qodef-m-info-text {
+                padding-right: 4%;
+                padding-left: 2%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1060px) {
+
+        .qodef-m-socail-links {
+            bottom: 210px;
+        }
+
+        .qodef-additional-swiper {
+            width: 100vw;
+
+            .qodef-m-info-holder {
+                padding: 0 0 0 56px;
+            }
+        }
+
+        .swiper-pagination {
+            display: none;
+        }
+    }
+
+    @include qodefScreenSize1024 {
+
+        .qodef-m-socail-links {
+            flex-direction: row;
+
+            .qodef-icon-holder {
+                margin-bottom: 0;
+                margin-right: 40px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    @include qodefScreenSize768 {
+
+        .qodef-m-socail-links {
+            flex-direction: column;
+            bottom: 284px;
+
+            .qodef-icon-holder {
+                margin-bottom: 40px;
+                margin-right: 0;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        .qodef-m-content-holder {
+
+            .qodef-m-title {
+                font-size: 80px;
+            }
+        }
+
+        .qodef-additional-swiper {
+            height: 244px;
+        }
+    }
+
+    @include qodefScreenSize680 {
+
+        .qodef-m-socail-links {
+            left: 30px;
+            bottom: 30px;
+            flex-direction: row;
+
+            .qodef-icon-holder {
+                margin-bottom: 0;
+                margin-right: 40px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        .swiper-navigation-holder {
+            display: none;
+        }
+
+        .qodef-additional-swiper {
+            display: none;
+        }
+
+        .qodef-m-content-holder {
+            width: 100%;
+            left: 0 !important;
+            margin: 0;
+            padding: 0 34px;
+            bottom: 50%;
+            transform: none !important;
+
+            .qodef-m-title {
+                font-size: 48px;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Showcase Slider Video Info shortcode responsive style - end
+   ========================================================================== */

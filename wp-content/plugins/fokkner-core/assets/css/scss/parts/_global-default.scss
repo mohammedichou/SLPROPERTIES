@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Global styles
+   ========================================================================== */
+
+.fokkner-core-page-inline-style {
+	position: absolute !important;
+	width: 0;
+	height: 0;
+	line-height: 1;
+	display: none;
+}
+
+//social icons group
+.qodef-social-group-icons {
+
+	.qodef-icon-holder {
+		margin-right: 37px;
+	}
+}
+
+.qodef-hide-outside-nav-680 {
+
+	@include qodefScreenSize680 {
+
+		.swiper-button-outside {
+			display: none;
+		}
+	}
+}
+
+.archive {
+
+	.qodef-blog .qodef-blog-item {
+		margin: 0 0 73px;
+	}
+}
+
+.mfp-content {
+
+	.mfp-close {
+		top: -24px!important;
+	}
+}
+
+.qodef-custom-underline-link {
+	position: relative;
+	@include qodefHiddenUnderline( $bottom: 2px );
+
+	&:hover {
+		@include qodefHiddenUnderlineActive();
+	}
+}
+
+.qodef-page-has-custom-section--uncover {
+
+	#qodef-custom-section--uncover {
+		position: fixed !important;
+		width: 100%;
+		bottom: 0;
+		z-index: -1;
+
+		.elementor-element {
+			opacity: 0;
+			transform: translateY(24px);
+			will-change: transform;
+			transition: opacity .44s ease-out, transform .62s ease;
+
+			@for $i from 1 through 6 {
+
+				&:nth-child(#{$i}) {
+					transition-delay: (#{$i * 120ms});
+				}
+			}
+		}
+
+		&.qodef-uncovering--active {
+			z-index: 0;
+
+			.elementor-element {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+
+	section:not(#qodef-custom-section--uncover) {
+		z-index: 1;
+	}
+}
+
+.qodef-sidearea-info {
+
+	p {
+
+		a {
+			line-height: 31px;
+			display: block;
+			position: relative;
+			> span {
+				position: relative;
+				@include qodefHiddenUnderline($bottom:-1px);
+				&:after {
+					position: absolute;
+				}
+			}
+
+
+			&:hover {
+				> span {
+					@include qodefHiddenUnderlineActive();
+				}
+			}
+		}
+	}
+}
+
+.single-post {
+
+	tbody {
+
+		tr {
+
+			th {
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+
